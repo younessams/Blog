@@ -36,7 +36,7 @@
                         Add New Blog
                     </Link>
                     <div v-if="blogs.length > 0" class="container shadow-xl">
-                        <table class="table table-hover rounded-lg h-full">
+                        <table class="table table-hover rounded-lg w-full p-2">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -82,15 +82,15 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <nav v-if="links.length > 1" aria-label="...">
-                            <ul class="pagination">
+                        <nav v-if="links.length > 77" class="">
+                            <ul class="flex">
                                 <li
                                     v-for="(link, p) in links"
                                     :key="p"
-                                    class="page-item"
+                                    class="mr-2"
                                 >
                                     <Link
-                                        class="page-link"
+                                        class=""
                                         :href="link.url"
                                         v-html="link.label"
                                     ></Link>
