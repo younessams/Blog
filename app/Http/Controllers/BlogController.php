@@ -56,7 +56,7 @@ class BlogController extends Controller
             return redirect()->route('blogs.index')->with(['message'=>'This Blog does\'t Not Exist']);
         }
         $blog = $blog->only(['id', 'title', 'body', 'image']);
-        return Inertia::render('Blog/Show', ['blog'=>$blog, 'url'=>env('APP_URL', 'http://localhost:8000').'/images/blogs']);
+        return Inertia::render('Blog/Show', ['blog'=>$blog, 'url'=>config('url').'/images/blogs']);
     }
 
     public function edit($id)
